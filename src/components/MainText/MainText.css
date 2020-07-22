@@ -1,0 +1,15 @@
+.MainTextContainer{
+    display: flex;
+    margin: 10% auto;
+    width: 50%;
+    min-height: 5%;
+    height: 100%;
+    box-shadow: gray;
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: center;
+}
+
+.MainText{
+    margin: 1em
+}
