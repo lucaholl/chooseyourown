@@ -4,12 +4,15 @@
     width: 50%;
     min-height: 5%;
     height: 100%;
-    box-shadow: gray;
+    box-sizing: border-box;
+    box-shadow: 0 0 0.5em 0.1em;
     background-color: whitesmoke;
     align-items: center;
     justify-content: center;
 }
 
 .MainText{
-    margin: 1em
+    margin: 1em;
+    opacity: 1;
+    transition: opacity 500ms ease-in;
 }

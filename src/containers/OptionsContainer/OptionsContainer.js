@@ -7,8 +7,8 @@ class OptionsContainer extends React.Component{
     render(){
         return (
             <div className='OptionsContainer'>
-                {this.props.options.map(option => {
-                    return <Options click={this.props.handleClick} key={option.id} text={option.text} id={option.id} />
+                {this.props.options.map((option, index) => {
+                    return <Options click={this.props.handleClick} key={index} text={option.text} id={index} />
                 })}    
             </div>
         )

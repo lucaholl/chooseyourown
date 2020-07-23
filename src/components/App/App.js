@@ -6,25 +6,25 @@ import MainText from '../MainText/MainText'
 import OptionsContainer from '../../containers/OptionsContainer/OptionsContainer'
 
 import CYO from '../../data/CYO' 
-import Player from '../../data/Player'
 
 class App extends React.Component{
 
   constructor(props){
     super(props);
     this.state = {
-      textData: CYO.choices[0]
+      currentNode: CYO.nodes.START
       }
       
     this.handleTextChange = this.handleTextChange.bind(this);
   }
-  handleTextChange(id){
+  handleTextChange(choice){
     /*
     Update Current Text Display and Options
     */
+    let nextNode = CYO.makeChoice(this.state.currentNode, choice);
     this.setState(
       {
-        textData: CYO.choices[id]
+        currentNode: nextNode
       }
     )
   }
@@ -34,9 +34,12 @@ class App extends React.Component{
         <header className="App-header">
           HELLO
         </header>
-          <MainText main={this.state.textData.main}/>
+          <MainText 
+            main={this.state.currentNode.text}
+            id={this.state.currentNode.ID}
+            />
           <OptionsContainer 
-            options={this.state.textData.options} 
+            options={this.state.currentNode.options} 
             handleClick={this.handleTextChange}
             />
       </div>
