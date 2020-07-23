@@ -1,7 +1,8 @@
 ## Choose Your Own Adventure
 
 Built to practice using React.
-All of the text nodes are stored in src/CYO.js.
+
+All of the text nodes are stored in src/CYO.js. The React components read the data stored in the CYO object and communicate with it when a new choise is made.
 
 
 
